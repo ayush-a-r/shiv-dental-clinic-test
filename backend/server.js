@@ -2,6 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+app.use(cors({ origin: 'https://roaring-tanuki-ba40ef.netlify.app/' }));
+
 const PDFDocument = require('pdfkit');
 const fs = require('fs');
 const path = require('path');
@@ -9,7 +11,7 @@ const { Patient } = require('./models');
 
 const app = express();
 app.use(bodyParser.json());
-app.use(cors());
+
 app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 
 // --- MongoDB connection ---
