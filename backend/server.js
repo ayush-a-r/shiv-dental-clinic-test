@@ -1,7 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const cors = require('cors');
+
 
 
 const PDFDocument = require('pdfkit');
@@ -11,7 +11,8 @@ const { Patient } = require('./models');
 
 const app = express();
 app.use(bodyParser.json());
-app.use(cors({ origin: 'https://genuine-griffin-19e9b5.netlify.app/' }));
+const cors = require('cors');
+app.use(cors({ origin: 'https://shiv-dental-clinic.netlify.app' }));
 
 app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 
