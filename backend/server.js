@@ -11,7 +11,7 @@ const { Patient } = require('./models');
 
 const app = express();
 app.use(bodyParser.json());
-app.use(cors({ origin: 'https://roaring-tanuki-ba40ef.netlify.app/' }));
+app.use(cors({ origin: 'https://genuine-griffin-19e9b5.netlify.app/' }));
 
 app.use('/uploads', express.static(path.join(__dirname, '../uploads')));
 
