@@ -1,4 +1,4 @@
-const API = "https://shiv-dental-clinic-backend.onrender.com"; // Your deployed backend URL
+const API = "https://shiv-dental-clinic-backend.onrender.com"; 
 
 let medicineFields = [];
 
